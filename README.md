@@ -4,6 +4,24 @@ A tiny MCP server for testing clients and transport setup. It exposes one tool, 
 
 Built with [rmcp](https://docs.rs/rmcp/latest/rmcp/).
 
+## Installation
+
+### Cargo
+
+echo-mcp is published on crates.io, so you can install the latest stable build with:
+
+```bash
+cargo install --locked echo-mcp
+```
+
+If you already have `echo-mcp` installed, rerun the command with `--force` to upgrade.
+
+### GitHub releases
+
+Download a pre-built binary from the [release page](https://github.com/mirrorange/echo-mcp/releases)
+
+Release assets are machine-specific, so pick the archive that matches your OS once the download page opens.
+
 ## Features
 
 - `stdio` transport for local MCP client integrations
@@ -25,11 +43,11 @@ hello
 ## Run
 
 ```bash
-cargo run -- stdio
+echo-mcp stdio
 ```
 
 ```bash
-cargo run -- http --bind 127.0.0.1:8000
+echo-mcp http --bind 127.0.0.1:8000
 ```
 
 The streamable HTTP endpoint will be available at `http://127.0.0.1:8000/mcp`.
@@ -45,7 +63,7 @@ The streamable HTTP endpoint will be available at `http://127.0.0.1:8000/mcp`.
 {
   "mcpServers": {
     "echo-mcp": {
-      "command": "/absolute/path/to/echo-mcp/target/debug/echo-mcp",
+      "command": "echo-mcp",
       "args": ["stdio"]
     }
   }
