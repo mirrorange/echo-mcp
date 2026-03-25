@@ -2,6 +2,11 @@
 name = "echo-mcp"
 version = "0.1.0"
 edition = "2024"
+description = "A tiny MCP echo server for testing clients and transport setup."
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/mirrorange/echo-mcp"
+homepage = "https://github.com/mirrorange/echo-mcp"
 
 [dependencies]
 anyhow = "1.0"
