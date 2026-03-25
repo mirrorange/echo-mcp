@@ -8,8 +8,11 @@ use rmcp::{
     model::{Implementation, ServerCapabilities, ServerInfo},
     tool, tool_handler, tool_router,
     transport::{
-        StreamableHttpServerConfig, io::stdio,
-        streamable_http_server::{session::local::LocalSessionManager, tower::StreamableHttpService},
+        StreamableHttpServerConfig,
+        io::stdio,
+        streamable_http_server::{
+            session::local::LocalSessionManager, tower::StreamableHttpService,
+        },
     },
 };
 use schemars::JsonSchema;
