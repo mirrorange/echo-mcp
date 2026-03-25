@@ -1,6 +1,6 @@
 [package]
 name = "echo-mcp"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "A tiny MCP echo server for testing clients and transport setup."
 license = "MIT"
