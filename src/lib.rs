@@ -53,6 +53,7 @@ impl EchoServer {
         description = "Return the provided message exactly as it was received."
     )]
     async fn echo(&self, Parameters(EchoRequest { message }): Parameters<EchoRequest>) -> String {
+        eprintln!("{message}");
         message
     }
 }

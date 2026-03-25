@@ -1,6 +1,6 @@
 # echo-mcp
 
-A tiny MCP server for testing clients and transport setup. It exposes one tool, `echo`, which simply returns the input message unchanged.
+A tiny MCP server for testing clients and transport setup. It exposes one tool, `echo`, which returns the input message unchanged and also prints it to `stderr`.
 
 Built with [rmcp](https://docs.rs/rmcp/latest/rmcp/).
 
@@ -40,6 +40,8 @@ and returns:
 hello
 ```
 
+The same message is also written to `stderr` when the tool receives it.
+
 ## Run
 
 ```bash
@@ -55,7 +57,7 @@ The streamable HTTP endpoint will be available at `http://127.0.0.1:8000/mcp`.
 ## Tool
 
 - `echo`
-  Returns the provided message exactly as received.
+  Returns the provided message exactly as received, and writes it to `stderr`.
 
 ## Example MCP Client Config
 
